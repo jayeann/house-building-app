@@ -1,0 +1,11 @@
+.homepage{
+    text-align: center;
+}
+
+.homepage h1{
+    font-size: 5rem;
+    max-width: 600px;
+}
+.homepage h1 span{
+    color: aqua;
+}

@@ -15,7 +15,6 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
   color: white;
   color-scheme: light dark;
 }
@@ -42,3 +41,85 @@ h1 {
   }
 }
 
+li {
+  text-align: right;
+  height: auto;
+}
+
+li.list-group-item{
+  background-color: transparent;
+  border-color: transparent;
+  color: white;
+  height: 100px;
+}
+
+li.list-group-item :first-child{
+    margin-top: 1.5rem;
+}
+
+li.list-group-item.active {
+  background-color: transparent;
+  color: rgb(3, 145, 145);
+  font-weight: bold;
+  border-color: transparent;
+  height: 100px;
+}
+
+li.list-group-item.active svg {
+  background-color:  rgb(3, 145, 145);
+}
+
+li .col{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+li svg{
+  padding: 1.25rem 1rem;
+  background-color: #888;
+  color: white;
+  border-radius: 10rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+ 
+.container-step{
+  min-width: 1250px!important;
+}
+
+.container-step-content{
+  min-height: 650px;
+  padding: 2rem;
+}
+.container-step-content .card-footer{
+  background-color: transparent;
+  border-top: none;
+}
+
+.container-plants{
+  max-height: 350px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.container-summary label{
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.container-summary p{
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.container-summary p.size{
+  text-transform: lowercase;
+}
+
+.container-summary svg {
+  background-color:  rgb(3, 145, 145);
+  padding: 1rem 0.85rem;
+  color: white;
+  border-radius: 2rem;
+}

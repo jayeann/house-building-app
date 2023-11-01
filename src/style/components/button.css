@@ -1,0 +1,56 @@
+
+#build-btn{
+  background-color: transparent;
+  border-color: black;
+  color: black;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+}
+
+#build-btn:hover{
+  border-color: rgb(1, 187, 187);
+  color: rgb(1, 187, 187);
+}
+
+#build-btn.home-btn{
+  color: white!important;
+  margin: 5rem;
+  padding: 1.5rem 2rem;
+  border-color: white;
+  text-decoration: none;
+}
+
+#build-btn.home-btn:hover{
+  border-color: aqua;
+  color: aqua!important;
+}
+
+#build-btn.toast-cancel-btn{
+  border-color: transparent;
+  padding:  0.5rem 1rem;
+  margin: 0;
+}
+#build-btn.toast-btn{
+  background-color: aqua;
+  padding:  0.25rem 0.5rem;
+  margin: 0;
+}
+#build-btn.summary-btn{
+  padding:  0.25rem 0.5rem;
+  margin: 0;
+}
+
+#build-btn.toast-btn:hover{
+  background-color: rgb(1, 199, 199);
+  color: white;
+}
+
+#back-button{
+  color: gray;
+}
+
+#back-button:hover{
+  color: rgb(1, 187, 187);
+}
+
