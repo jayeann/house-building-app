@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import StepHeader from "../components/StepHeader";
-import BackButton from "../components/BackButton";
-import BasicButton from "../components/BasicButton";
+import BackButton from "../components/Button/BackButton";
+import BasicButton from "../components/Button/BasicButton";
 import StepContext from "../context/StepContext";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import CardButton from "../components/CardButton";
+import CardButton from "../components/Button/CardButton";
 import Note from "../components/Note";
 import { ROOF_TYPE } from "../data";
 import useLocalStorage from "../hooks/useLocalStorage";

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Toast, ToastContainer } from "react-bootstrap";
-import BasicButton from "./BasicButton";
+import BasicButton from "./Button/BasicButton";
 import { ToastProps } from "../types/component/Toast.props";
 import "../style/components/toast.css";
 

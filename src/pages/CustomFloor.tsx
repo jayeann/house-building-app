@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Modal, Card } from "react-bootstrap";
-import BackButton from "../components/BackButton";
-import BasicButton from "../components/BasicButton";
+import BackButton from "../components/Button/BackButton";
+import BasicButton from "../components/Button/BasicButton";
 import Floor from "../components/Floor";
 import FloorContext from "../context/FloorContext";
 import Room from "../components/Room";

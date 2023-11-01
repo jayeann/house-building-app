@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import StepHeader from "../components/StepHeader";
-import BasicButton from "../components/BasicButton";
+import BasicButton from "../components/Button/BasicButton";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import CardButton from "../components/CardButton";
+import CardButton from "../components/Button/CardButton";
 import { FoundationProps } from "../types/pages/Foundation.props";
 import StepContext from "../context/StepContext";
 import { Link } from "react-router-dom";
-import BackButton from "../components/BackButton";
+import BackButton from "../components/Button/BackButton";
 import Note from "../components/Note";
 import { FOUNDATION_TYPE } from "../data";
 import useLocalStorage from "../hooks/useLocalStorage";

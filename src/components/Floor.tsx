@@ -1,5 +1,5 @@
 import { Row, Col } from "react-bootstrap";
-import BasicButton from "./BasicButton";
+import BasicButton from "./Button/BasicButton";
 import { FloorProps } from "../types/component/Floor.props";
 
 function Floor({ level, handleAddRoom, children }: FloorProps) {

@@ -1,7 +1,7 @@
 import { Card, Container, Row } from "react-bootstrap";
-import BasicButton from "../components/BasicButton";
+import BasicButton from "../components/Button/BasicButton";
 import { Link, useNavigate } from "react-router-dom";
-import BackButton from "../components/BackButton";
+import BackButton from "../components/Button/BackButton";
 import SummaryContent from "../components/SummaryContent";
 import {
   faLayerGroup,

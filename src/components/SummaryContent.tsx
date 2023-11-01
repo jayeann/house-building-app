@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Row, Col, Container } from "react-bootstrap";
-import BasicButton from "./BasicButton";
+import BasicButton from "./Button/BasicButton";
 import { SummaryContentProps } from "../types/component/SummaryContent.props";
 import ImageSelect from "./ImageSelect";
 import { RoomItem } from "../types/component/Room.props";

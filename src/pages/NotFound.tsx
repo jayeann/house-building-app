@@ -1,8 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import { Card, Container, Image } from "react-bootstrap";
+import BackButton from "../components/Button/BackButton";
 import IMAGES from "../assets";
 import "../style/pages/notFound.css";
-import BackButton from "../components/BackButton";
-import { Link, useNavigate } from "react-router-dom";
 
 function NotFound() {
   const navigate = useNavigate();

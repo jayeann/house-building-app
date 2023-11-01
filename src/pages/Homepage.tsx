@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import BasicButton from "../components/BasicButton";
+import BasicButton from "../components/Button/BasicButton";
 import BasicToast from "../components/BasicToast";
 import useIsObjectEmpty from "../hooks/useIsObjectEmpty";
 import "../style/pages/homepage.css";

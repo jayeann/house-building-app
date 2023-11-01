@@ -10,8 +10,8 @@ import {
   InputGroup,
 } from "react-bootstrap";
 import StepHeader from "../components/StepHeader";
-import BackButton from "../components/BackButton";
-import BasicButton from "../components/BasicButton";
+import BackButton from "../components/Button/BackButton";
+import BasicButton from "../components/Button/BasicButton";
 import StepContext from "../context/StepContext";
 import IMAGES from "../assets";
 import CustomFloor from "./CustomFloor";

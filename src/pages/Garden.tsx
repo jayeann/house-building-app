@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useMemo, useState } from "react";
 import { Card, Col, Container, Form, Image, Row } from "react-bootstrap";
 import StepHeader from "../components/StepHeader";
-import BasicButton from "../components/BasicButton";
-import BackButton from "../components/BackButton";
+import BasicButton from "../components/Button/BasicButton";
+import BackButton from "../components/Button/BackButton";
 import StepContext from "../context/StepContext";
 import usePlants from "../hooks/usePlants";
 import { Link, useNavigate } from "react-router-dom";

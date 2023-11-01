@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import "../style/components/button.css";
-import { BackButtonProps } from "../types/component/BackButton.props";
+import { BackButtonProps } from "../../types/component/BackButton.props";
 
 function BackButton({ children, value, size, handleClick }: BackButtonProps) {
   return (
