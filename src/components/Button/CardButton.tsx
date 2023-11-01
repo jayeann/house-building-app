@@ -1,6 +1,6 @@
 import { Card } from "react-bootstrap";
-import "../style/components/card.css";
 import { CardButtonProps } from "../../types/component/CardButton.props";
+import "../../style/components/card.css";
 
 function CardButton({ item, isSelected, handleClick }: CardButtonProps) {
   return (
