@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Homepage, BuildHouse, Summary, NotFound } from "./pages";
-import "./App.css";
+import "./style/global.css";
 
 function App() {
   return (
