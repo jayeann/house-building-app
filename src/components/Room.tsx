@@ -9,10 +9,17 @@ import {
 } from "../data";
 import { RoomProps } from "../types/component/Room.props";
 
-function Room({ id, item, key, floorLevel, handleChange }: RoomProps) {
+function Room({
+  id,
+  item,
+  key,
+  floorLevel,
+  handleChange,
+  handleRemoveRoom,
+}: RoomProps) {
   return (
     <Row key={key}>
-      <Col lg="1">
+      <Col lg={2}>
         <h4>ROOM {item?.room}</h4>
       </Col>
       <Col>
@@ -116,6 +123,9 @@ function Room({ id, item, key, floorLevel, handleChange }: RoomProps) {
             </Form.Group>
           </Row>
         </Form>
+      </Col>
+      <Col lg="1">
+        <div className="container-remove-room">{/* insert btn here */}</div>
       </Col>
     </Row>
   );
