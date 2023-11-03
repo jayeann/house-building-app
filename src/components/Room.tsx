@@ -8,6 +8,7 @@ import {
   GLASS_TYPE,
 } from "../data";
 import { RoomProps } from "../types/component/Room.props";
+import RemoveButton from "./Button/RemoveButton";
 
 function Room({
   id,
@@ -122,10 +123,12 @@ function Room({
               </Form.Select>
             </Form.Group>
           </Row>
+          {item?.room !== 1 && (
+            <RemoveButton
+              handleClick={() => console.log("You clicked remove")}
+            />
+          )}
         </Form>
-      </Col>
-      <Col lg="1">
-        <div className="container-remove-room">{/* insert btn here */}</div>
       </Col>
     </Row>
   );

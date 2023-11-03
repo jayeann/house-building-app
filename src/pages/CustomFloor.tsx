@@ -54,7 +54,7 @@ function CustomFloor({ show, handleClose }: CustomFloorProps) {
                   }
                 >
                   {item?.rooms.map((itemRoom: any, indexRoom: number) => (
-                    <Card className="mb-2 ">
+                    <Card className="mb-3 ">
                       <Card.Body>
                         <Room
                           id={itemRoom.id}
