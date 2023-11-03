@@ -1,14 +1,6 @@
 import { useContext, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import {
-  Card,
-  Col,
-  Form,
-  Row,
-  Image,
-  Modal,
-  InputGroup,
-} from "react-bootstrap";
+import { Card, Col, Form, Row, Image, InputGroup } from "react-bootstrap";
 import StepHeader from "../components/StepHeader";
 import BackButton from "../components/Button/BackButton";
 import BasicButton from "../components/Button/BasicButton";
@@ -99,7 +91,6 @@ function NoOfFloors() {
   };
 
   const handleNext = () => {
-    // setLevelFloorsData(levelFloorsData);
     setLocalValue(levelFloorsData);
     stepContext?.handleNextBtn();
   };

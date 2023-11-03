@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Container } from "react-bootstrap";
 import Foundation from "./Foundation";
 import FloorArea from "./FloorArea";
@@ -71,12 +71,8 @@ function BuildHouse() {
   };
 
   const handleNextBtn = () => {
-    // if (value) {
     setSelectedStep(selectedStep + 1);
     setSelectedItem(data[selectedStep + 1]);
-
-    // localStorage.setItem(key, JSON.stringify(value));
-    // }
   };
 
   const handleBackBtn = () => {
