@@ -1,13 +1,14 @@
-import React, { useContext, useEffect, useMemo, useState } from "react";
-import { Card, Col, Container, Form, Image, Row } from "react-bootstrap";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import StepHeader from "../components/StepHeader";
 import BasicButton from "../components/Button/BasicButton";
 import BackButton from "../components/Button/BackButton";
 import StepContext from "../context/StepContext";
-import usePlants from "../hooks/usePlants";
-import { Link, useNavigate } from "react-router-dom";
+import Loader from "../components/Loader";
 import ImageSelect from "../components/ImageSelect";
 import { PlantsTypes } from "../types/pages/Plants.types";
+import usePlants from "../hooks/usePlants";
 import useIsObjectEmpty from "../hooks/useIsObjectEmpty";
 import useLocalStorage from "../hooks/useLocalStorage";
 
@@ -15,22 +16,24 @@ function Garden() {
   const navigate = useNavigate();
   const stepContext = useContext(StepContext);
   const [storedValue, setLocalValue] = useLocalStorage("garden", {});
-  const { error, data } = useIsObjectEmpty(storedValue)
-    ? usePlants()
-    : { error: null, data: null };
-
-  let plantsData = useIsObjectEmpty(storedValue)
+  const { error, data, isLoading } = usePlants(storedValue);
+  const plantsData = useIsObjectEmpty(storedValue)
     ? data?.data
     : storedValue.updatedPlantList;
-
   const [checkboxValues, setCheckboxValues] = useState(plantsData);
   const [selectedPlants, setSelectedPlants] = useState<PlantsTypes[]>(
-    storedValue.selectedPlants || []
+    storedValue?.selectedPlants || []
   );
+
+  useEffect(() => {
+    if (!isLoading && plantsData) {
+      setCheckboxValues(plantsData);
+    }
+  }, [plantsData]);
 
   const handleCheckboxChange = (item: any, event: any) => {
     const updatedList = checkboxValues;
-    if (checkboxValues) {
+    if (updatedList) {
       const { checked } = event.target;
       updatedList[item.id - 1].isChecked = checked;
 
@@ -56,6 +59,33 @@ function Garden() {
 
   const handleBack = () => stepContext?.handleBackBtn();
 
+  const CardContent = () => {
+    if (isLoading) {
+      console.log(data);
+      return <Loader />;
+    }
+    if (error) {
+      return "An error has occurred: " + error.message;
+    }
+    const plants = checkboxValues;
+    console.log("plants:", plants, checkboxValues, plantsData);
+    return (
+      <Container className="container-plants mt-4">
+        <Row>
+          {plants?.length &&
+            plants?.map((item: any, key: number) => (
+              <Col lg="2" key={key}>
+                <ImageSelect
+                  item={item}
+                  isSelected={item.isChecked}
+                  handleClick={handleCheckboxChange}
+                />
+              </Col>
+            ))}
+        </Row>
+      </Container>
+    );
+  };
   return (
     <Card className="container-step-content">
       <Card.Body>
@@ -63,21 +93,8 @@ function Garden() {
           question={`Choose plants that you want to put in your garden.`}
           step={5}
         />
-        {error && "An error has occurred: " + error.message}
-        <Container className="container-plants mt-4">
-          <Row>
-            {checkboxValues?.length &&
-              checkboxValues?.map((item: any, key: number) => (
-                <Col lg="2" key={key}>
-                  <ImageSelect
-                    item={item}
-                    isSelected={item.isChecked}
-                    handleClick={handleCheckboxChange}
-                  />
-                </Col>
-              ))}
-          </Row>
-        </Container>
+        <CardContent />
+        {/* <Loader /> */}
       </Card.Body>
       <Card.Footer>
         <BackButton handleClick={handleBack}>Back</BackButton>

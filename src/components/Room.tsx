@@ -8,11 +8,19 @@ import {
   GLASS_TYPE,
 } from "../data";
 import { RoomProps } from "../types/component/Room.props";
+import RemoveButton from "./Button/RemoveButton";
 
-function Room({ id, item, key, floorLevel, handleChange }: RoomProps) {
+function Room({
+  id,
+  item,
+  key,
+  floorLevel,
+  handleChange,
+  handleRemoveRoom,
+}: RoomProps) {
   return (
     <Row key={key}>
-      <Col lg="1">
+      <Col lg={2}>
         <h4>ROOM {item?.room}</h4>
       </Col>
       <Col>
@@ -115,6 +123,11 @@ function Room({ id, item, key, floorLevel, handleChange }: RoomProps) {
               </Form.Select>
             </Form.Group>
           </Row>
+          {item?.room !== 1 && (
+            <RemoveButton
+              handleClick={() => console.log("You clicked remove")}
+            />
+          )}
         </Form>
       </Col>
     </Row>

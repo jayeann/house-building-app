@@ -29,6 +29,10 @@ function CustomFloor({ show, handleClose }: CustomFloorProps) {
     });
   };
 
+  const handleRemoveRoom = () => {
+    //insert code here
+  };
+
   return (
     <Modal show={show} onHide={handleClose} fullscreen>
       <Modal.Header closeButton>
@@ -50,7 +54,7 @@ function CustomFloor({ show, handleClose }: CustomFloorProps) {
                   }
                 >
                   {item?.rooms.map((itemRoom: any, indexRoom: number) => (
-                    <Card className="mb-2 ">
+                    <Card className="mb-3 ">
                       <Card.Body>
                         <Room
                           id={itemRoom.id}
@@ -58,6 +62,7 @@ function CustomFloor({ show, handleClose }: CustomFloorProps) {
                           item={itemRoom}
                           floorLevel={item?.floorNumber}
                           handleChange={handleChange}
+                          handleRemoveRoom={handleRemoveRoom}
                         />
                       </Card.Body>
                     </Card>

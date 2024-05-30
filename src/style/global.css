@@ -110,3 +110,7 @@ li svg{
   color: white;
   border-radius: 2rem;
 }
+
+.loader{
+  height: 40vh;
+}

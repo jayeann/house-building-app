@@ -22,4 +22,5 @@ export interface RoomProps {
   key?: number;
   floorLevel: number;
   handleChange: (roomId: string, floorLevel: number, e: any) => void;
+  handleRemoveRoom?: (roomId: string, floorLevel: number, e: any) => void;
 }
