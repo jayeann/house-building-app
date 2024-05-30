@@ -61,14 +61,12 @@ function Garden() {
 
   const CardContent = () => {
     if (isLoading) {
-      console.log(data);
       return <Loader />;
     }
     if (error) {
-      return "An error has occurred: " + error.message;
+      return <>{"An error has occurred: " + error.message}</>;
     }
     const plants = checkboxValues;
-    console.log("plants:", plants, checkboxValues, plantsData);
     return (
       <Container className="container-plants mt-4">
         <Row>
