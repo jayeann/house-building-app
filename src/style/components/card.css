@@ -1,0 +1,52 @@
+
+.card-btn{
+  min-height: 200px;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.card-btn.card-active{
+  border: 3px rgb(3, 145, 145) solid;
+}
+.card-btn p{
+  margin-top: 2rem;
+}
+
+.card.card-note{
+  background-color: rgb(3, 145, 145, 0.1);
+}
+
+.card.card-custom-floor{
+  background-color: rgb(3, 145, 145, 0.1);
+}
+
+.card.card-custom-floor h4{
+  min-height: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card.card-image{
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.card.card-image .form-check{
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.card-image input[type="checkbox"]{
+    position: absolute;
+    right: 15px;
+}
+
+.card-image.card-active img{
+  border: 3px rgb(3, 145, 145) solid;
+}
